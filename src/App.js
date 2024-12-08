@@ -1,62 +1,63 @@
 
 import './App.css';
-import React from 'react';
+import React, {Component} from 'react';
 
 
 
-const Header = () => {
-  return <h2>Hello, world!</h2>
+//функция дл создания props
+
+class WhoAmI extends Component {
+  constructor(props) {
+    super();
+    this.state = {
+      years: 27,
+      position: '',
+    }
+    //пример смены контекста через bind()
+    // this.nextYear = this.nextYear.bind(this);
+  }
+
+  nextYear() {
+    this.setState(state => ({
+      years: state.years + 1,
+    }))
+  }
+
+  commitInputChanges = (e) => {
+    this.setState({
+      position: e.target.value,
+    })
+  }
+
+
+  return() {
+    const {years, position} = this.state;
+    const {name, surname, link} = this.props;
+      <div>
+        <button onClick={this.nextYear}>+++</button>
+        <h1>My name is {name}, surname - {surname}, 
+          age {years},
+          position {position
+          }</h1>
+          <form >
+            <span>Введите должность</span>
+            <input type="text" onChange={this.commitInputChanges} />
+          </form>
+        <a href="{props.link}">My profile</a>
+      </div>
+  }
 }
 
 
-// const Field = () => {
-//   const holder = 'Enter here';
-//   const styledFiled = {
-//     width: '300px',
-//   }
-//   return <input 
-//             placeholder={holder} 
-//             type='text' 
-//             style={styledFiled}/>
-// }
-
-
-//создание компонента через класс
-class Field extends React.Component {
-      render() {
-        const holder = 'Enter here';
-        const styledFiled = {
-          width: '300px',
-      };
-      return <input 
-      placeholder={holder} 
-      type='text' 
-      style={styledFiled}/>
-}
-}
-
-function Btn() {
-  const text = 'Log in';
-
-  //examples
-  // const res = () => {
-  //   return 'Log in';
-  // }
-  // const p = <p>Log in</p>;
-
-  const logged = true;
-  return <button>{logged ? 'Enter' : text}</button>
-}
 
 function App() {
   return (
     <div className="App">
-        <Header/>
-        <Field/>
-        <Btn/>
+        <WhoAmI name={()=>{return 'Nikita'}} surname="Sychev" link="nikitasychev.ru"/>  
+        <WhoAmI name={()=>{return 'Nikita'}} surname="SychevNikita" link="nikitasychev.ru"/>
     </div>
   );
 }
 
 export default App;
-export {Header};
+
