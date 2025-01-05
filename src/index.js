@@ -4,7 +4,12 @@ import './index.css';
 import App from './App';
 //импорт стилей компонентов 
 import { Button } from './App';
+import {BootstrapButton, BootstrapTest} from './BootstrapTest';
 import styled from 'styled-components';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 //наследование стилей (для изменения стилей в импортируемой Button)
 
@@ -21,6 +26,9 @@ const elem = (
   <StrictMode>
       <App/>
       <BigButton as="a">Отправить отчет</BigButton> 
+    
+      <BootstrapButton></BootstrapButton>
+      <BootstrapTest></BootstrapTest>
   </StrictMode>  
 );
 
