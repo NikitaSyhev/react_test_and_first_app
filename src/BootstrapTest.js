@@ -13,17 +13,17 @@ const BootstrapTest =() => {
                 <Image src="https://i4.hurimg.com/i/hurriyet/75/0x0/56e3ffdd67b0a931607d99b7.jpg" rounded />
                 </Col>
                 <Col xs={6} md={4}>
-                <Image src="https://i.ytimg.com/vi/A8NAkjRDtPU/maxresdefault.jpg.js/171x180" roundedCircle />
+                <Image src="https://i.pinimg.com/originals/ba/bd/6d/babd6d37eb2dd965c7f1dfb516d54094.jpg" roundedCircle />
                 </Col>
                 <Col xs={6} md={4}>
-                <Image src="https://avatars.dzeninfra.ru/get-zen_doc/1565406/pub_5f8f38d76dc8f92edae3e671_5f8f3ca32c1a69338e463d44/scale_1200" thumbnail />
+                <Image src="https://fresco.wallset.ru/images/detailed/1208/3086.jpg" thumbnail />
         </Col>
       </Row>
     </Container>
             </Col>
             <Col>
                     <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src="https://fotobase.co/files/img/photo/brazilianki-na-pliazhe/brazilianki-na-pliazhe-0.webp" />
+                    <Card.Img variant="top" src="https://www.zastavki.com/pictures/originals/2014/Nature___Seasons___Spring_Cold_river_in_spring_067776_.jpg" />
                     <Card.Body>
                     <Card.Title>Beach Brazil</Card.Title>
                     <Card.Text>
@@ -40,7 +40,7 @@ const BootstrapTest =() => {
 const BootstrapButton =() => {
     return(
         <>
-        <Button variant="primary">Primary</Button>
+        <Button variant="primary">TEST BUTTON</Button>
       </>
     );
 }
